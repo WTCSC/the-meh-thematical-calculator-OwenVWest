@@ -21,10 +21,12 @@ def power_of(x, y):
     for i in range(1,y):
         main = main*x
     return(main)
+calctype_ask = True
 keep_calc = True
 calctype = ""
-while keep_calc == True:
-    type_out("Ugh, Well someone obviously cant do math. Welcome to the Meh-culator... \n")
+type_out("Ugh, Well someone obviously cant do math. Welcome to the Meh-culator... \n")
+
+while calctype_ask:
     type_out("Enter the first number: ")
     num1 = input()
     type_out("Enter the second...: ")
@@ -37,32 +39,32 @@ while keep_calc == True:
         num2 = input()
     num1 = int(num1)
     num2 = int(num2)
-
-    ans = 0
-    type_out("What calculation are you making me do?(+, -, /, *, ^): ")
-    calctype = input()
-    if calctype == "+":
-        ans = add(num1, num2)
-        keep_calc = False
-        type_out(f"{num1} + {num2} is {ans}, Happy?\n")
-    elif calctype == "-":
-        ans = subtract(num1, num2)
-        keep_calc = False
-        type_out(f"{num1} - {num2} is {ans}, Happy?\n")
-    elif calctype == "/":
-        ans = divide(num1, num2)
-        keep_calc = False
-        type_out(f"{num1} / {num2} is {ans}, Happy?\n")
-    elif calctype == "*":
-        ans = multiply(num1, num2)
-        keep_calc = False
-        type_out(f"{num1} * {num2} is {ans}, Happy?\n")
-    elif calctype == "^":
-        ans = power_of(num1, num2)
-        keep_calc = False
-        type_out(f"{num1}^{num2} is {ans}, Happy?\n")
-    else:
-        type_out("You didnt give me a valid calculation type, use the listed characters that I GAVE YOU and try again.\n")
+    while keep_calc:
+        ans = 0
+        type_out("What calculation are you making me do?(+, -, /, *, ^): ")
+        calctype = input()
+        if calctype == "+":
+            ans = add(num1, num2)
+            keep_calc = False
+            type_out(f"{num1} + {num2} is {ans}, Happy?\n")
+        elif calctype == "-":
+            ans = subtract(num1, num2)
+            keep_calc = False
+            type_out(f"{num1} - {num2} is {ans}, Happy?\n")
+        elif calctype == "/":
+            ans = divide(num1, num2)
+            keep_calc = False
+            type_out(f"{num1} / {num2} is {ans}, Happy?\n")
+        elif calctype == "*":
+            ans = multiply(num1, num2)
+            keep_calc = False
+            type_out(f"{num1} * {num2} is {ans}, Happy?\n")
+        elif calctype == "^":
+            ans = power_of(num1, num2)
+            keep_calc = False
+            type_out(f"{num1}^{num2} is {ans}, Happy?\n")
+        else:
+            type_out("You didnt give me a valid calculation type, use the listed characters that I GAVE YOU and try again.\n")
     type_out("Do you want me to do more calculations for you (please dont), Yes(Y) or No(N): ")
     cont_check = input("").lower()
     if cont_check == "y" or cont_check == "yes":
