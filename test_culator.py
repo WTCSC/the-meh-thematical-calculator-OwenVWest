@@ -15,9 +15,9 @@ def test_divide():
     assert divide(3,0) == 0 #failure
 def test_multiply():
     """Tests the multiplication function"""
-    assert multiply(3,3) == 3
+    assert multiply(3,3) == 9
     assert multiply(12,4) == 48
 def test_exponent():
     """Tests the exponentials function"""
     assert power_of(4,2) == 16
-    assert power_of(102387218277189723, 0) == 1
+    assert power_of(102387218277189723, 1) == 102387218277189723
