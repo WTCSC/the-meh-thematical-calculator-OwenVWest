@@ -11,7 +11,10 @@ def type_out(text, delay=0.01):
 def multiply(x, y):
     return(x*y)
 def divide(x, y):
-    return(x/y)
+    if y == 0:
+        return 0
+    else:
+        return(x/y)
 def add(x, y):
     return(x+y)
 def subtract(x, y):
