@@ -42,3 +42,6 @@ _N/A_ (None Needed)
 ![ValidCalc](validcalc.jpg)
 ###### An invalid use
 ![InvalidCalc](invalidcalc.jpg)
+### How to run tests
+Once you are in the correct directory (cd the-meh-thematical-calculator-OwenVWest)  
+Run (pytest -s) to run the tests for the program
